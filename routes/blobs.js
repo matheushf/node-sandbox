@@ -17,7 +17,7 @@ router.use(methodOverride(function (req, res) {
 router.route('/')
 // GET all blobs
     .get(function (req, res, next) {
-        mongoose.model('Blob').find({}, function (er, blobs) {
+        mongoose.model('Blob').find({}, function (err, blobs) {
             if (err) {
                 return console.error(err);
             } else {
@@ -27,7 +27,7 @@ router.route('/')
                     html: function () {
                         res.render('blobs/index', {
                             title: 'All my Blobs',
-                            "blobls": blobs
+                            "blobs": blobs
                         });
                     },
                     json: function () {

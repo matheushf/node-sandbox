@@ -7,11 +7,11 @@ var bodyParser = require('body-parser');
 
 // Model
 var db = require('./model/db');
-var blob = require ('./model/blobs');
+var blob = require('./model/blobs');
 
 // Routes
 var routes = require('./routes/index');
-var users = require('./routes/users');
+//var users = require('./routes/users');
 var blobs = require('./routes/blobs');
 
 var app = express();
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/', routes);
-app.use('/users', users);
+// app.use('/users', users);
 app.use('/blobs', blobs);
 
 // catch 404 and forward to error handler
@@ -66,3 +66,4 @@ app.use(function (err, req, res, next) {
 
 
 module.exports = app;
+
