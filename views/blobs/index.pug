@@ -3,6 +3,8 @@ extends ../layout.pug
 block content
     h1.
         #{title}
+    br
+    a(href='new') New
     ul
         each blob, i in blobs
             li

@@ -6,7 +6,6 @@ before_install:
   - 'sh -e /etc/init.d/xvfb start'
 before_script:
   - 'npm install gulp-cli'
-  - 'npm install'
   - 'npm install --dev-dep'
 after_script:
   - 'gulp'
